@@ -4,7 +4,7 @@
 [![Live Demo](https://img.shields.io/badge/LIVE_DEMO-Visit_Website-success?style=for-the-badge&logo=streamlit)](https://quantum-eavesdropping-detector.streamlit.app/)
 [![GitHub Repo](https://img.shields.io/badge/SOURCE_CODE-View_on_GitHub-blue?style=for-the-badge&logo=github)](https://github.com/adityaakhuntia/quantum-eavesdropping-detector)
 
----
+--- 
 
 ## 🌌 Project Overview
 **Quantum Shield** is a high-performance security platform that leverages the principles of **Quantum Mechanics** to protect communication channels. This project simulates a **BB84 Quantum Key Distribution (QKD)** protocol and uses an intelligent detection engine to identify intercept-resend attacks (eavesdropping) in real-time.
