@@ -64,7 +64,7 @@ streamlit run dashboard/app.py
 *(The app defaults to **Demo Mode** for an instant experience. To use the real API, start the FastAPI server in `backend/`)*
 
 ---
-
+  
 ## 🤝 Connect & Collaborate
 **Aditya Akhuntia**  
 *Full-Stack Developer & Quantum Enthusiast*
