@@ -916,6 +916,7 @@ with control_col:
             help="Used for the dashboard risk band in addition to the backend model verdict.",
         )
         st.caption("Backend endpoint: http://127.0.0.1:8000/analyze")
+        demo_mode = st.checkbox("Enable Demo Mode (Simulation)", value=True, help="Bypasses the backend API and simulates quantum bit error rates locally for demonstration.")
         run_scan = st.button("Run detection", type="primary")
 
     render_workflow()
@@ -932,15 +933,30 @@ with result_col:
 
         if run_scan:
             with st.spinner("Analyzing photon disturbance pattern..."):
-                time.sleep(0.35)
-                try:
-                    response = requests.get(API_URL, params={"eavesdrop": attack}, timeout=8)
-                    response.raise_for_status()
-                    data = response.json()
-                except requests.RequestException as exc:
-                    st.error("The analyzer API is not reachable. Start it with: python -m uvicorn backend.api:app --reload")
-                    st.caption(f"Request detail: {exc}")
+                time.sleep(0.6)
+                data = None
+                
+                if demo_mode:
+                    # Simulation Logic for Demo Mode
+                    import random
+                    if attack:
+                        qber = random.uniform(0.25, 0.35)
+                        attack_detected = True
+                    else:
+                        qber = random.uniform(0.01, 0.12)
+                        attack_detected = qber > threshold
+                    data = {"qber": qber, "attack_detected": attack_detected}
                 else:
+                    # Real API Call
+                    try:
+                        response = requests.get(API_URL, params={"eavesdrop": attack}, timeout=5)
+                        response.raise_for_status()
+                        data = response.json()
+                    except requests.RequestException as exc:
+                        st.error("The analyzer API is not reachable. Ensure the backend is running or enable 'Demo Mode' in the sidebar.")
+                        st.caption(f"Request detail: {exc}")
+
+                if data:
                     qber = float(data.get("qber", 0))
                     attack_detected = bool(data.get("attack_detected", False))
                     add_history_row(qber, attack, attack_detected, scan_mode)
