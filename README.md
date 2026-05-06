@@ -11,7 +11,7 @@
 
 > **"In the quantum world, observation is an intervention."** 
 > This project demonstrates how we can detect hackers simply by the disturbance they leave on individual photons.
-
+  
 ---
 
 ## 🎯 Key Highlights for Recruiters
