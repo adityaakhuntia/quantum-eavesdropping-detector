@@ -1,4 +1,4 @@
-# 🛡️ Quantum Shield: Eavesdropping Detector  
+# 🛡️ Quantum Shield: Eavesdropping Detector   
 ### **An Advanced Quantum Security Monitoring Dashboard**
   
 [![Live Demo](https://img.shields.io/badge/LIVE_DEMO-Visit_Website-success?style=for-the-badge&logo=streamlit)](https://quantum-eavesdropping-detector.streamlit.app/)
