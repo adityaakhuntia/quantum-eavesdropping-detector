@@ -1,74 +1,77 @@
-# 🛡️ Quantum Shield: Eavesdropping Detector
+# 🛡️ Quantum Shield: Eavesdropping Detector 
+### **An Advanced Quantum Security Monitoring Dashboard**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge.svg)](https://quantum-eavesdropping-detector-4itzyq6nweap7qtvzarvjx.streamlit.app/)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-**Quantum Shield** is a high-fidelity security dashboard designed to monitor and detect unauthorized eavesdropping in **Quantum Key Distribution (QKD)** networks using the **BB84 Protocol**.
+[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-Visit_Website-success?style=for-the-badge&logo=streamlit)](https://quantum-eavesdropping-detector.streamlit.app/)
+[![GitHub Repo](https://img.shields.io/badge/SOURCE_CODE-View_on_GitHub-blue?style=for-the-badge&logo=github)](https://github.com/adityaakhuntia/quantum-eavesdropping-detector)
 
 ---
 
-## 🚀 Live Demo
-Check out the live dashboard here: [Quantum Shield Live](https://quantum-eavesdropping-detector-4itzyq6nweap7qtvzarvjx.streamlit.app/)
+## 🌌 Project Overview
+**Quantum Shield** is a high-performance security platform that leverages the principles of **Quantum Mechanics** to protect communication channels. This project simulates a **BB84 Quantum Key Distribution (QKD)** protocol and uses an intelligent detection engine to identify intercept-resend attacks (eavesdropping) in real-time.
+
+> **"In the quantum world, observation is an intervention."** 
+> This project demonstrates how we can detect hackers simply by the disturbance they leave on individual photons.
 
 ---
 
-## ✨ Key Features
-- **Real-time Telemetry:** Visualizes Quantum Bit Error Rate (QBER) and alerts users to anomalies.
-- **Attack Simulation:** Toggle between "Clean" and "Attack" scenarios to see how intercept-resend attacks disturb the channel.
-- **Glassmorphism UI:** A premium, dark-themed interface built for modern security operations centers (SOC).
-- **Dual Mode:** Supports both a live FastAPI backend for real quantum simulations and a "Demo Mode" for zero-setup exploration.
+## 🎯 Key Highlights for Recruiters
+*   **Full-Stack Integration:** Seamlessly connects a **FastAPI** backend with a high-fidelity **Streamlit** frontend.
+*   **Premium UX/UI:** Implements a modern **Glassmorphism** design system with custom CSS for a state-of-the-art feel.
+*   **Robust Logic:** Handles complex physics simulations (BB84 bases, photon polarization) and translates them into actionable security metrics.
+*   **Deployment Ready:** Architected with a "Demo Mode" fallback to ensure 100% uptime for portfolio visitors.
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** [Streamlit](https://streamlit.io/) (Python-based Web Framework)
-- **Styling:** Custom CSS with Glassmorphism and CSS Variables
-- **Backend:** [FastAPI](https://fastapi.tiangolo.com/) (High-performance API)
-- **Protocol:** BB84 Quantum Key Distribution Simulation
-- **Data Science:** NumPy & Scikit-learn for QBER analysis
+## ✨ Core Features
+| Feature | Description |
+| :--- | :--- |
+| **🔍 Real-time Detection** | Calculates QBER (Quantum Bit Error Rate) to detect Eve's presence. |
+| **🛡️ Attack Simulation** | Live toggle to simulate Intercept-Resend attacks on the quantum channel. |
+| **📊 Security Telemetry** | Dynamic risk bands and historical scan tracking for trend analysis. |
+| **💠 Glassmorphism UI** | A sleek, dark-themed dashboard designed for Security Operation Centers (SOC). |
+| **⚙️ Dual Operation** | Supports both local API-driven data and a standalone simulation mode. |
 
 ---
 
-## 🏗️ Architecture
-1. **The Quantum Engine:** Simulates the exchange of photons between Alice and Bob.
-2. **The Eavesdropper (Eve):** Optionally intercepts photons, causing inevitable disturbance (Heisenberg's Uncertainty Principle).
-3. **The Detector:** The FastAPI backend calculates the QBER and predicts if an attack is present.
-4. **The Dashboard:** The Streamlit UI provides the security verdict and recommended actions.
+## 🛠️ Technical Implementation
+### **The Stack**
+- **Frontend:** Streamlit, Custom CSS, JavaScript (Animations)
+- **Backend:** FastAPI, Uvicorn
+- **Logic:** BB84 Protocol Simulation, NumPy, Python 3.11+
+- **DevOps:** Git, GitHub Actions, Streamlit Cloud
+
+### **The Architecture**
+1.  **Quantum Simulation:** Alice and Bob exchange qubits using randomized bases.
+2.  **Intercept-Resend:** If enabled, "Eve" intercepts the photons, causing a measurable 25% increase in error rates.
+3.  **QBER Analysis:** The system compares shifted keys and flags any error rate above the security threshold (typically 11-15%).
+4.  **Verdict Engine:** Translates raw physics data into "Alert" or "Secure" status for the user.
 
 ---
 
-## 💻 Local Setup
+## 🚀 Getting Started
 
-### 1. Clone the repository
+### **1. Clone & Install**
 ```bash
 git clone https://github.com/adityaakhuntia/quantum-eavesdropping-detector.git
 cd quantum-eavesdropping-detector
-```
-
-### 2. Install dependencies
-```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the Backend (Optional for Live Data)
-```bash
-python -m uvicorn backend.api:app --reload
-```
-
-### 4. Launch the Dashboard
+### **2. Launch Dashboard**
 ```bash
 streamlit run dashboard/app.py
 ```
+*(The app defaults to **Demo Mode** for an instant experience. To use the real API, start the FastAPI server in `backend/`)*
 
 ---
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+## 🤝 Connect & Collaborate
+**Aditya Akhuntia**  
+*Full-Stack Developer & Quantum Enthusiast*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/adityaakhuntia)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-lightgrey?style=flat-square&logo=github)](https://github.com/adityaakhuntia)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-orange?style=flat-square&logo=react)](https://adityaakhuntia.github.io)
 
 ---
-
-## 🤝 Connect
-**Aditya Akhuntia**
-- [GitHub](https://github.com/adityaakhuntia)
-- [LinkedIn](https://linkedin.com/in/adityaakhuntia)
+*Developed as a showcase of secure communication protocols and modern web architecture.*
